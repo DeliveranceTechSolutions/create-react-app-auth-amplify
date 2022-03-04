@@ -2,6 +2,7 @@
   "name": "notes",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@aws-amplify/ui-react": "^1.2.6",
     "@googlemaps/react-wrapper": "^1.1.24",
@@ -11,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/googlemaps": "^3.43.3",
     "aws-amplify": "^4.3.14",
+    "aws-amplify-react": "^5.1.9",
     "fast-equals": "^3.0.0",
     "google-map-react": "^2.1.10",
     "leaflet": "^1.7.1",

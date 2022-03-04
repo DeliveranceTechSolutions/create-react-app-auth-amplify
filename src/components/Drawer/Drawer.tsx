@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-
+import Amplify from 'aws-amplify';
+import aws_exports from '../../aws-exports';
+import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { Box, Button, Divider, Drawer, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { Link } from 'react-router-dom';
+Amplify.configure(aws_exports);
+
 const useStyles = makeStyles({
   paper: {
     background: 'white',
   }
 });
 
-export default function MainDrawer(props: any) {
+function MainDrawer(props: any) {
   const classes = useStyles();
   const [orientation, setOrientation] = React.useState(true);
 
@@ -59,6 +63,8 @@ export default function MainDrawer(props: any) {
               </ListItem>
             </Link>
           ))}
+          
+            <AmplifySignOut />
         </List>
       </Box>
     </Box>
@@ -97,3 +103,5 @@ export default function MainDrawer(props: any) {
     </Box>
   );
 }
+
+export default withAuthenticator(MainDrawer);
