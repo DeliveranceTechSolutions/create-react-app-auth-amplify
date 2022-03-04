@@ -103,7 +103,6 @@ function App() {
           <Toolbar />
           <ZoomControl position={'bottomright'}/>
         <Box style={{marginTop: '10%'}}>
-          <AmplifySignOut />
         </Box>
         {
           markers.map(marker => {
@@ -124,4 +123,4 @@ function App() {
   );
 }
 
-export default withAuthenticator(App);
+export default App;
