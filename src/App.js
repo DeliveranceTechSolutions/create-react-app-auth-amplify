@@ -101,9 +101,9 @@ function App() {
           zIndex={10}
         />
           <Toolbar />
-        <Box style={{marginTop: '10%'}}>
           <ZoomControl position={'bottomright'}/>
-
+        <Box style={{marginTop: '10%'}}>
+          <AmplifySignOut />
         </Box>
         {
           markers.map(marker => {

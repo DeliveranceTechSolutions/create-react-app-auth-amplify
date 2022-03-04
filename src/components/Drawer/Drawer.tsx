@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import Amplify from 'aws-amplify';
-import aws_exports from '../../aws-exports';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react';
 import { Box, Button, Divider, Drawer, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import { Link } from 'react-router-dom';
-Amplify.configure(aws_exports);
 
 const useStyles = makeStyles({
   paper: {
@@ -64,7 +61,6 @@ function MainDrawer(props: any) {
             </Link>
           ))}
           
-            <AmplifySignOut />
         </List>
       </Box>
     </Box>
@@ -90,6 +86,7 @@ function MainDrawer(props: any) {
               color: "whitesmoke",
               fontSize: "1.8em",
             }}>{anchor}</Button>
+            <AmplifySignOut />
           <Drawer
             classes={{ paper: classes.paper }}
             anchor={'left'}
