@@ -6,6 +6,7 @@
   "dependencies": {
     "@aws-amplify/auth": "^4.4.2",
     "@aws-amplify/core": "^4.4.0",
+    "@aws-amplify/storage": "^4.4.16",
     "@aws-amplify/ui-react": "^1.2.6",
     "@googlemaps/react-wrapper": "^1.1.24",
     "@googlemaps/typescript-guards": "^1.0.7",
