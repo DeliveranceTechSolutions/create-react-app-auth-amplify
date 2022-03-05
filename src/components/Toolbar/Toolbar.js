@@ -1,6 +1,6 @@
 import React from 'react';
 import './Toolbar.css';
-import MainDrawer from '../Drawer/Drawer.tsx';
+import MainDrawer from '../Drawer/Drawer.js';
 
 export default function Toolbar() {
     return (

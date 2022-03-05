@@ -10,11 +10,11 @@ const useStyles = makeStyles({
   }
 });
 
-function MainDrawer(props: any) {
+function MainDrawer(props) {
   const classes = useStyles();
   const [orientation, setOrientation] = React.useState(true);
 
-  const toggleDrawer = (anchor: any, open: boolean) => (event: any) => {
+  const toggleDrawer = (anchor, open) => (event) => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
       return;
     }
@@ -22,7 +22,7 @@ function MainDrawer(props: any) {
     setOrientation(!orientation);
   };
 
-  const list = (anchor: any) => (
+  const list = (anchor) => (
     <Box
       sx={{
         overflow: 'none',
@@ -43,7 +43,7 @@ function MainDrawer(props: any) {
             <Link style={{ color: '#1d1e20', textDecoration: "none"}} to={`/${text.toLowerCase()}`} >
               <ListItem button key={index}>
                 <ListItemText primary={
-                    text.split('_').map((word: any) => word.charAt(0).toUpperCase() + word.substring(1)).join(' ')
+                    text.split('_').map((word) => word.charAt(0).toUpperCase() + word.substring(1)).join(' ')
                   } />
               </ListItem>
             </Link>
@@ -55,7 +55,7 @@ function MainDrawer(props: any) {
             <Link style={{ color: '#1d1e20', textDecoration: "none"}} to={`/${text.toLowerCase()}`} >
               <ListItem button key={index}>
                 <ListItemText primary={
-                    text.split('_').map((word: any) => word.charAt(0).toUpperCase() + word.substring(1)).join(' ')
+                    text.split('_').map((word) => word.charAt(0).toUpperCase() + word.substring(1)).join(' ')
                 } />
               </ListItem>
             </Link>

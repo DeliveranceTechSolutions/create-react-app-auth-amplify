@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { withAuthenticator, AmplifySignOut } from '@aws-amplify/ui-react'
 import { MapContainer, TileLayer, Marker, Popup, ZoomControl, useMap } from 'react-leaflet';
+import { Redirect } from 'react-router-dom';
 import { Box } from '@material-ui/core';
 import * as Leaf from 'leaflet';
 import Toolbar from './components/Toolbar/Toolbar';
-import Amplify from 'aws-amplify';
-import aws_exports from './aws-exports';
-Amplify.configure(aws_exports);
 
 function App() {
   const LeafIcon = Leaf.Icon.extend({
@@ -51,6 +48,7 @@ function App() {
   const [longitude, setLongitude] = React.useState(0);
   const [ministerType, setMinisterType] = React.useState(0);
   const [zoom, setZoom] = React.useState(5);
+
   const [markers, setMarkers] = React.useState([
     { 
       coordinates: [46.2305, -121.1], 
