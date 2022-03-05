@@ -8,6 +8,8 @@ Amplify.configure(aws_exports)
 
 
 function Map() {
+    //comment to build
+    
   const isAuthenticated = () => {
       return localStorage.getItem('amplify-signin-with-hostedUI');
   }
